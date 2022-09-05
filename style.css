@@ -1,0 +1,163 @@
+*, *::before,*::after{
+    box-sizing: border-box;
+}
+
+body {
+    margin:0;
+    padding:0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+}
+
+header {
+    background-color: #0069F9;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper {
+    background: white;
+    width: 720px;
+    max-width: 75%;
+    position: relative;
+    border-radius: 5px;
+}
+nav {
+    border-bottom: 1px solid #CCCC;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+}
+
+.input-field input {
+width:100%;
+height:3rem;
+padding: 0 10rem 0 2rem;
+}
+
+.input-field input::placeholder {
+    color:#bfbfbf;
+padding: 0 10rem 0 2rem;
+
+}
+
+.text-area textarea::placeholder {
+   color: #bfbfbf;
+   padding:0 2rem;
+}
+
+.input-field input,.text-area textarea {
+    border: 1px solid #bfbfbf;
+    border-radius: 5px;
+    outline: none;
+}
+
+.text-area textarea {
+    font-family: 'Poppins', sans-serif;
+    padding: 0 2rem;
+    width: 100%;
+    resize: none;
+    max-height: 10rem;
+    min-height: 8rem;
+}
+
+.text-area textarea:focus ~ i,.input-field input:focus  ~ i{
+    color:#0D6EFD;
+}
+
+.text-area textarea:focus,.input-field input:focus {
+    border: 2px solid #0D6EFD;
+}
+
+.container {
+    padding-block: 1rem;
+    width: 100%;
+    margin-inline: auto;
+}
+
+.even {
+    padding: 2rem;
+}
+
+form {
+    display: grid;
+    gap:1rem;
+   }
+
+   .detail {
+    display: grid;
+    gap:1rem;
+   }
+
+
+   .input-field,.text-area {
+    position: relative;
+    width:100%;
+   }
+
+    .input-field i,.text-area i {
+    position: absolute;
+    top: 15px;
+    left: 11px;
+    text-align: center;
+    color: #CDCDCD;
+    }
+
+    .text-area i {
+        top: 3px;
+    }
+
+    .btn {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        flex-direction: column;
+
+    }
+
+    .btn button {
+        background-color: #0D6EFD;
+        color:white;
+        border: 1px solid #0D6EFD;
+        border-radius: 5px;
+        padding:1rem 1.2rem;
+        font-size: 1.2rem;
+        cursor: pointer;
+    }
+
+    .btn span {
+        color: #0D6EFD;
+        display: none;
+    }
+
+@media (min-width:50em) {
+   
+   
+    .detail {
+        display: flex;
+        gap:1rem;
+   }
+   .btn {
+    flex-direction: row;
+   }
+
+}
+
+@media (max-width:50em) {
+    .btn button {
+        width:100%;
+    }
+}
+
+@media(max-width:17.5em) {
+    .input-field input {
+        width:80%;
+        padding: 0;
+    }
+
+    .text-area textarea {
+        width:80%;
+    }
+}
